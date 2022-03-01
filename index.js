@@ -38,9 +38,9 @@ const displayTasks = () => {
     li.classList.add('draggable');
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
-    if (tsk.checked === true) {
-      checkbox.setAttribute('checked', 'checked');
-    }
+    // eslint-disable-next-line no-unused-expressions
+    tsk.checked ? checkbox.setAttribute('checked', true) : null;
+
 
     checkbox.addEventListener('change', (e) => {
       e.preventDefault();
