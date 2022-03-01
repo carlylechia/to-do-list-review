@@ -19,11 +19,7 @@ const getFromLocalStorage = () => {
 };
 
 const resetIndex = (tasks) => {
-  for (let i = 0; i < tasks.length; i += 1) {
-    let indx = i + 1;
-    indx = i;
-    tasks[i].index = indx;
-  }
+  tasks.forEach( (val, index) => { val.index = index + 1 });
 };
 
 const editTask = (desc, index) => {
